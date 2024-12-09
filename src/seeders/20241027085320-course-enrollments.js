@@ -1,0 +1,68 @@
+module.exports = {
+	up: async (queryInterface, Sequelize) => {
+		const courseEnrollments = [
+			{ course_id: 1, student_id: 1, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 2, assignedBy: 1, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 3, assignedBy: 1, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 4, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 5, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 6, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 7, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 8, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 9, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 10, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 11, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 12, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 13, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 14, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 15, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 16, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 17, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 18, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 19, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 20, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 21, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 22, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 23, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 24, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 25, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 26, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 27, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 28, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 29, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 30, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 31, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 32, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 33, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 34, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 35, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 36, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 37, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 38, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 39, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 40, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 41, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 42, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 43, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 44, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 45, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 46, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 47, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 48, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 49, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 50, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 51, assignedBy: 2, enrolled_at: new Date() },
+			{ course_id: 1, student_id: 52, assignedBy: 2, enrolled_at: new Date() },
+		];
+
+		await queryInterface.bulkInsert(
+			"course_enrollments",
+			courseEnrollments,
+			{}
+		);
+	},
+
+	down: async (queryInterface, Sequelize) => {
+		await queryInterface.bulkDelete("course_enrollments", null, {});
+	},
+};
